@@ -11,7 +11,6 @@ mongoose.connect(
     NODE_PASSWORD +
     '@ds263948.mlab.com:63948/todo'
 );
-console.log(NODE_USERNAME);
 
 //Create Schema
 var todoSchema = new mongoose.Schema({
