@@ -5,11 +5,7 @@ const NODE_USERNAME = process.env.NODE_USERNAME;
 const NODE_PASSWORD = process.env.NODE_PASSWORD;
 //Connect to database Mlab
 mongoose.connect(
-  'mongodb://' +
-    NODE_USERNAME +
-    ':' +
-    NODE_PASSWORD +
-    '@ds263948.mlab.com:63948/todo'
+  'mongodb://' + 'test' + ':' + 'testing123' + '@ds263948.mlab.com:63948/todo'
 );
 
 //Create Schema
@@ -20,7 +16,7 @@ var todoSchema = new mongoose.Schema({
 var Todo = mongoose.model('Todo', todoSchema);
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 module.exports = function (app) {
-  app.get('*', function (req, res) {
+  app.get('/', function (req, res) {
     //get data from mongodb and pass it to view
     Todo.find({}, function (err, data) {
       if (err) throw err;
