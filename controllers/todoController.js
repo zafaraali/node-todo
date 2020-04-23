@@ -5,8 +5,13 @@ const NODE_USERNAME = process.env.NODE_USERNAME;
 const NODE_PASSWORD = process.env.NODE_PASSWORD;
 //Connect to database Mlab
 mongoose.connect(
-  'mongodb://' + 'test' + ':' + 'testing123' + '@ds263948.mlab.com:63948/todo'
+  'mongodb://' +
+    NODE_USERNAME +
+    ':' +
+    NODE_PASSWORD +
+    '@ds263948.mlab.com:63948/todo'
 );
+console.log(NODE_USERNAME);
 
 //Create Schema
 var todoSchema = new mongoose.Schema({
