@@ -14,4 +14,4 @@ todoController(app);
 //listen to port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
-console.log(PORT);
+console.log('Listening to port ' + PORT);
