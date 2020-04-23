@@ -1,16 +1,17 @@
 {
-  "name": "js-playlist",
+  "name": "node-todo",
   "version": "1.0.0",
-  "description": "a little todo list ",
+  "description": "A node todo list",
   "main": "app.js",
   "scripts": {
-     "start": "node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zafar",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^8.2.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mongoose": "^5.0.9"
